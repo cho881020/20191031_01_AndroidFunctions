@@ -16,8 +16,10 @@ class MainActivity : AppCompatActivity() {
         var receivedName = intent.getStringExtra("name")
         var receivedNumber = intent.getStringExtra("memberNumber")
 
+        var receivedId = intent.getStringExtra("memberId")
+
         memberNumTxt.text = "${receivedNumber}번 회원"
-        memberNameTxt.text = receivedName
+        memberNameTxt.text = "${receivedName}(${receivedId})"
 
 
     }

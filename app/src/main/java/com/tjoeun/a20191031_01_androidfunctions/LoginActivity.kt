@@ -20,11 +20,14 @@ class LoginActivity : AppCompatActivity() {
             var userName = nameEdt.text.toString()
             var userNumber = memberNumEdt.text.toString()
 
+            var userId = idEdt.text.toString()
+
             Toast.makeText(this, "${userNumber}번 ${userName} 회원님 환영합니다.", Toast.LENGTH_SHORT).show()
 
             var myIntent = Intent(this, MainActivity::class.java)
             myIntent.putExtra("name", userName)
             myIntent.putExtra("memberNumber", userNumber)
+            myIntent.putExtra("memberId", userId)
             startActivity(myIntent)
 
         }
